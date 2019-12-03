@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.11.11)  3 DEC 2019 15:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.11.11)  3 DEC 2019 16:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -241,20 +241,30 @@ Overfull \hbox (5.61568pt too wide) in paragraph at lines 5--6
 [1{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
-]) (./problem.tex) (./solutions.tex (./sgx.tex) (./rote.tex) (./speicher.tex)) (./runtime.tex) (./evaluation.tex) (./discussion.tex) (/Users/monicazhang/Desktop/COMP9102/.texpadtmp/paper.bbl) [2] (/Users/monicazhang/Desktop/COMP9102/.texpadtmp/paper.aux) ) 
+]) (./problem.tex) (./solutions.tex (./sgx.tex
+Overfull \hbox (12.0559pt too wide) in paragraph at lines 3--4
+\OT1/cmr/m/n/9 Intel has re-cently added sup-port for mono-tonic coun-ters (MC) []
+ []
+
+[2]) (./rote.tex
+Overfull \hbox (3.57819pt too wide) in paragraph at lines 3--4
+\OT1/cmr/m/n/9 pro-vide sta-ble per-sis-tent roll-back at-tack pro-tec-tions, ROTE []
+ []
+
+) (./speicher.tex)) (./runtime.tex) (./evaluation.tex) (./discussion.tex) (/Users/monicazhang/Desktop/COMP9102/.texpadtmp/paper.bbl) [3] (/Users/monicazhang/Desktop/COMP9102/.texpadtmp/paper.aux) ) 
 Here is how much of TeX's memory you used:
- 2499 strings out of 492616
- 33036 string characters out of 6129480
- 106196 words of memory out of 5000000
+ 2500 strings out of 492616
+ 33043 string characters out of 6129480
+ 107196 words of memory out of 5000000
  6336 multiletter control sequences out of 15000+600000
- 26104 words of font info for 59 fonts, out of 8000000 for 9000
+ 27240 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,8n,29p,1234b,238s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,8n,29p,1258b,238s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on /Users/monicazhang/Desktop/COMP9102/.texpadtmp/paper.pdf (2 pages, 141881 bytes).
+Output written on /Users/monicazhang/Desktop/COMP9102/.texpadtmp/paper.pdf (3 pages, 147594 bytes).
 PDF statistics:
- 68 PDF objects out of 1000 (max. 8388607)
- 49 compressed objects within 1 object stream
+ 71 PDF objects out of 1000 (max. 8388607)
+ 51 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
