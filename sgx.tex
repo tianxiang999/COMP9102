@@ -20,6 +20,15 @@ memory is slow (around 10 writes a second). This weakness largely limits the per
 current high throughput KVS systems such as Redis~\cite{} and Apache Zookeeper~\cite{}.
 Thus, directly applying monotonic counter to preserve freshness is impractical.
 
+
+
+\subsubsection{Limitations}
+Though being as a selective feature in SGX architecture, it has strict memory constraints and performs slow during experimental tests~\cite{}. 
+
+The SGX Monotonic Counter updates take 80-250 ms and reads 60-140 ms. When an enclave needs to persistently store an updated state, it can increment a counter, include the counter value and identifier to the sealed data, and verify integrity of the stored data based on counter value at the time of unsealing. However, such approach may wear out the used non-volatile memory. Assuming a system that updates one of the enclaves on the same platform once every 250 ms, the non-volatile memory used to implement the counter wears out after approximately one million writes, making the counter functionality unusable after a couple of days of continuous use. Even with a modest update rate of one increment per minute, the counters are exhausted in two years. Thus, SGX counters are unsuitable for systems where state updates are frequent and continuous. Additionally, since the non-volatile memory used to store the counters resides outside the processor package, the mechanism is likely vulnerable to bus tapping and flash mirroring attacks~\cite{}.
+
+Note that SGX also provides the SGX trusted time feature for checking the timestamp of one stored data record. However, including a timestamp to each sealed data version only allows an enclave to distinguish which out of two seals is more recent, enclaves cannot identify if the sealed data provided by the OS is fresh and latest.
+
 However, the idea of counter increment technique does exist and recent papers~\cite{} have 
 shown that users can indeed benefit from such protection against rollback attacks.
 Basically, there are two kinds of solutions for counter-based rollback protection.
@@ -32,7 +41,7 @@ and restore to the updated state (value) of the counter without breaking the pro
 But if the system fails at runtime, the \textit{inc-then-store} can not recover because 
 the counter has a future value while the latest stored object in persistent memory has a smaller 
 counter value. Due to the deterministic increase of the counter, the system cannot recover from 
-the system crash.
+system crash.
 
 The second approach is \textit{store-then-inc}, where the enclave first stores the object with 
 an incremented counter value to persistent memory and increments the counter thereafter.
@@ -50,12 +59,3 @@ consideration in system build up. The drawbacks of \textit{inc-then-store} techn
 (a) it cannot recover from runtime failure and (b) it has relatively slow throughput as each seal operation 
 should wait for the write of counter. For the \textit{store-then-inc} technique, it has higher throughput 
 but may suffer from replay attack. When the system crashes, 
-
-\subsubsection{Limitations}
-Though being as a selective feature in SGX architecture, it has strict memory constraints and performs slow during experimental tests~\cite{}. 
-
-The SGX Monotonic Counter updates take 80-250 ms and reads 60-140 ms. When an enclave needs to persistently store an updated state, it can increment a counter, include the counter value and identifier to the sealed data, and verify integrity of the stored data based on counter value at the time of unsealing. However, such approach may wear out the used non-volatile memory. Assuming a system that updates one of the enclaves on the same platform once every 250 ms, the non-volatile memory used to implement the counter wears out after approximately one million writes, making the counter functionality unusable after a couple of days of continuous use. Even with a modest update rate of one increment per minute, the counters are exhausted in two years. Thus, SGX counters are unsuitable for systems where state updates are frequent and continuous. Additionally, since the non-volatile memory used to store the counters resides outside the processor package, the mechanism is likely vulnerable to bus tapping and flash mirroring attacks~\cite{}.
-
-Note that SGX also provides the SGX trusted time feature for checking the timestamp of one stored data record. However, including a timestamp to each sealed data version only allows an enclave to distinguish which out of two seals is more recent, enclaves cannot identify if the sealed data provided by the OS is fresh and latest.
-
-
