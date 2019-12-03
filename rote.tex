@@ -1,12 +1,64 @@
 \subsection{ROTE}
 
-To overcome the slowness of SGX Monotonic Counters and provide stable persistent rollback attack protections, ROTE~\cite{} is proposed as a distributed trusted counter service based on a consensus protocol.
+To overcome the slowness of SGX Monotonic Counters and provide stable persistent 
+rollback attack protections, ROTE~\cite{} is proposed as a distributed trusted 
+counter service based on a consensus protocol.
 
-\subsubsection{Overview}
+\subsubsection{Overview of ROTE}
 
+ROTE is a \textit{inc-then-store} based system that protects against rollback attacks.
+To overcome the low throughput of monotonic counter increment, ROTE uses a distributed 
+secure counter storage to help verify the version of a target enclave. The intuition 
+behind is simple, that a single SGX-enabled platform is difficult to prevent rollback
+attacks but many platforms can work together to assist the process of verification.
+The assisting servers are incentive to do this job as they can also benefit from 
+such protection.
 
+With the assistance of a group of servers, ROTE assumes a strong adversary  
+that can either control the OS of the target platform or any of the assisting platforms.
+The adversary can break the protection of SGX and even act as a network-level administrator
+that controls the interactive communication in the network by delaying, replaying or 
+revising network packets. However, as a \textit{inc-then-store} based system, ROTE 
+assumes no tolerance of some of the platform crashes and by default no crash will happen
+in a protocol run. If crash tolerance is required, then a \textit{store-then-inc}
+technique is required, and even the system should support both of the techniques to 
+allow users choose by their tolerance of crash.
+
+The update stage of ROTE works as follows. A client first triggers a counter increment 
+in local enclave, the enclave increments the counter (initialized as zero) in runtime
+memory, signs the counter value and sends the signed counter value to all assisting 
+servers. Upon receiving the signed counter value, each assisting server updates the 
+value of targeting (client's) counter table in memory and sends back their state 
+of counter value. Note that the value is temporarily stored in memory 
+and not sealed to disk to avoid endless propagation. When the client receives $q$
+feedbacks, it compares the value and returns ACks if the value matches its own.
+Then, the client can ensure that the version is correct, seal the current counter 
+value and the object to disk. 
+
+ROTE also develops a protocol to recover from system reboot/failure, and a distributed 
+mechanism to securely store and compare counter values in remote assisting servers.
+With a strong network adversary model, ROTE protects
+against both network partitioning and replay attacks. The update protocol, 
+recover protocol and distributed secure storage mechanism work together to make ROTE 
+a robust KVS system that provides protection against rollback attacks.
 
 \subsubsection{Limitations}
 
+As is mentioned above, ROTE leverages \textit{inc-then-store} counter increment 
+technique as the foundation to defend against rollback attacks. The bottleneck 
+of such technique still exists in ROTE: the crash during protocol run can totally 
+ruin the system and prevent the system from recovery. 
 
+We propose two future directions for further improving ROTE's trust model by enabling 
+crash recovery between sealing counter values and sealing objects to disk.
+Our first proposal is to ensure the atomicity of the \textit{write\_counter()} function
+and \textit{seal\_object()} function. Currently in ROTE, the crash may happen between the 
+two functions, contributing to a counter with a future value and making the KVS unrecoverable.
+If we ensure the atomicity of the two functions, then the counter sealing and object sealing 
+will succeed or fail at the same time, and the scenario where the counter has a future value 
+will not appear.
 
+Our second approach is to backup the counter value in disk, right before the verification 
+of received counters in ROTE. In that case, if the crash happens after the sealing of counter
+(before sealing the object), the KVS can still recover to the older version of counter value 
+by referring to the log.

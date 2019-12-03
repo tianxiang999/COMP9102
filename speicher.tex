@@ -1,5 +1,25 @@
 \subsection{Speicher}
 
+The Speicher system~\cite{} is another KVS that provides rollback protection.
+It mainly has two differences compared to ROTE introduced above. First, 
+Speicher is a typical \textit{store-then-inc} based system that first stores 
+object with pre-incremented counter values into persistent disk memory and increments
+counter value thereafter. The second difference lies in the architecture. The ROTE system
+uses several assisting severs organized by a trusted group manager while the Speicher system 
+uses only localized protection.
+
+The update stage of Speicher works as follows. To update a record or add a new 
+record in KVS, Speicher first inserts the record into a runtime data structure
+named as \textit{memtable}. Then the counter is incremented to the value in 
+the stored record. Speicher is a fully asynchronous system that decouples the 
+increment operation and the store operation, which means that Speicher batches
+the increment operation after a \textit{expected time}. During the expected 
+time, the user can wait for the increment of counter to be stable, and can 
+abort the update operation if time expires. This mechanism prevents users 
+from potential rollback attacks. In case a system crashes between a store
+operation and increment operation, the stored record will become invalid as 
+the counter value is beyond the older version of the counter stored in disk.
+
 
 
 

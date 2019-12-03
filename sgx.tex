@@ -58,4 +58,4 @@ The two techniques are both practical but have different drawbacks which should 
 consideration in system build up. The drawbacks of \textit{inc-then-store} technique mainly include: 
 (a) it cannot recover from runtime failure and (b) it has relatively slow throughput as each seal operation 
 should wait for the write of counter. For the \textit{store-then-inc} technique, it has higher throughput 
-but may suffer from replay attack. When the system crashes, 
+but may suffer from replay attacks~\cite{}. 
