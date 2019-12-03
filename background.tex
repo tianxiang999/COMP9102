@@ -1,2 +1,20 @@
 \section{Background}
-This is background.
+\subsection{Secure Enclave}
+A secure enclave is a set of software and hardware features that together provide an isolated execution environment to enable a set of strong security guarantees for applications running inside the enclave. Enclave allows user-level as well as Operating System~(OS) code to define private regions of memory, whose contents are protected and unable to be either read or saved by any process outside the enclave itself, including processes running at higher privilege levels~\cite{}. 
+
+Primally, secure enclaves can provide confidentiality, integrity, and attestation. Confidentiality guarantees that an adversary outside of the enclave cannot inspect the state of execution inside the enclave — even if they compromise the operating system or correctness of the computation running inside the enclave even if the operating system has been compromised or a user attempts to subvert the execution of the program inside the enclave. Finally, hardware-based attestation provides an unforgeable proof that enables a remote party to verify what has run inside the enclave even if they don’t have physical access to the machine. A secure enclave thus provides a powerful cornerstone for secure computing and development of secure systems in general. 
+
+
+Intuitively, secure enclave fundamentally ensures the correctness and isolation in executing given process. The confirmation of input data freshness is hard to achieve, especially when the enclave encounters crash or restart. There are several wildly used secure enclave services~\cite{}, one of the most popular security architectures is Intel Software Guard Extensions (SGX)~\cite{}. However, a mature secure enclave designation as SGX still shows unsatisfied performance towards rollback attacks. In this report, we focus on the SGX architecture and its existing promotions in proposing protection against rollback attacks.
+
+
+\subsection{Rollback Attack}
+
+Rollback attacks, also as known as the replay attacks, remain a potential secure problem in secure enclave. In a rollback attack, attackers replace the latest data with an older version without being identified by the system. 
+
+Data integrity violation through rollback attacks can have severe implications. Consider, for example, a financial application implemented as an enclave. The enclave repeatedly processes incoming transactions at high speed and maintains an account balance for each user or a history of all transactions in the system. If the adversary manages to revert the enclave to its previous state, the maintained account balance or the queried transaction history does not match the executed transactions.
+
+In reality, enclaves cannot easily detect this replay, because the processor is unable to maintain persistent state across enclave executions that may include reboots or crash. Another way to carry out rollback attacks in secure enclaves is to create multiple instances of a same process and route update requests to one instance and read requests to the other. Due to the characteristic of secure enclave, the instances are indistinguishable to remote clients or OS.
+
+To avoid rollback attacks, most commonly considered direction is to record the time related information for every state change. In this paper, we mainly discuss three designations in rollback attacks protection built on the SGX architecture.
+
