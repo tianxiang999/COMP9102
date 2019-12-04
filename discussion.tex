@@ -1,2 +1,12 @@
 \section{Conclusion}
-This is conclusion.
+In this report, we discussed the freshness problem in state-of-art Key-Value Store (KVS) 
+systems. Typically, so-called rollback attackers might return an older version of records 
+to users. The use of Intel SGX helps nullify part of this problem, including the 
+confidentiality of data and integrity of execution code. However, directly apply SGX
+cannot solve this problem because SGX also fails to check the latest version of records. 
+Some prior works develop different counter increment based techniques to protect against
+rollback attacks, including ROTE~\cite{}, Speicher~\cite{}, EnclaveDB~\cite{} and so on.
+These systems either incurring moderate overhead or being effective in a distributed setting,
+with some drawbacks in either evaluation or crash tolerance. 
+Thus, we propose some improvements on the design and evaluation of existing work and plan 
+to implement and evaluate our prototype.

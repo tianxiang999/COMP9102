@@ -1,2 +1,26 @@
 \section{Evaluation Plan}
-This is evaluation part.
+To evaluate the effectiveness of the above-mentioned protection mechanisms and see 
+how our proposed ideas may help improve the threat model, we plan to analyze the following 
+features in the future.
+
+\noindent\textbf{Performance of Update and reboot. }
+Either a protection mechanism is used \textit{inc-then-store} or \textit{store-then-inc}, 
+it's significant to see the practicality in a large-scale KVS. In other word, by integrating 
+the rollback protection, the expected performance of update stage, including both the I/O throughput and
+end-to-end communication latency should be well studied. If there is moderate overhead compared 
+to the original design (e.g., Redis or Zookeeper), then the plan is considered to be both 
+cost-efficient and protection-effective. However, if the update stage cost significant
+overhead, then it is impractical to be deployed in real world.
+
+The recovery of KVS (i.e., restore) from a system crash, reboot or failure should be 
+measured as well. As the integrity of SGX-based mechanism is usually assumed to be immune to 
+parties outside the enclave, the only way to break the security property of these systems 
+is to completely control all the parties engaged in version check. Thus the defense of such 
+vulnerability might take extra overhead. We should evaluate how the recovery module effects 
+the effectiveness of KVS systems, such as manually reboot the system or cut off power.
+
+\noindent\textbf{SGX overhead. }
+The monotonic counter is slow, as introduced in both Background and \S\ref{problem}.
+We need to evaluate the overhead of using SGX isolation. More precisely, we should 
+breakdown the I/O overhead of entering/exiting SGX enclaves, the latency of counter mechanism (e.g., Speicher's asynchronous 
+counter increment), and the \textit{Read}/\textit{Write} throughput with limited enclave size.
