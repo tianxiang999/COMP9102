@@ -1,7 +1,7 @@
 \section{Problem}\label{problem}
 
 As the infrastructure of cloud computing grows rapidly, storage service providers use Key-Value Stores (KVS) 
-in data centers to persist user data, with high throughput and low end-to-end communication latency~\cite{}.
+in data centers to persist user data, with high throughput and low end-to-end communication latency~\cite{seeger2009key, paksula2010persisting}.
 Many users store their sensitive data (e.g., password, medical record) in these systems, while the protection 
 of these data is not enough. 
 Specifically, there are three dominant security properties in KVS: confidentiality, integrity and freshness.
@@ -11,10 +11,10 @@ operations of KVS cannot be tampered with, such as the changes to records in per
 is the ability to detect stale state of data, in case a malicious KVS returns an older version of a request record.
 
 Intel Software Guard eXtension (SGX), a popular security hardware on commodity available Intel CPUs, is promising 
-to provide the first two security properties in KVS~\cite{}. SGX provides an abstraction of secure enclaves, which is a secured 
+to provide the first two security properties in KVS~\cite{sgxexplained}. SGX provides an abstraction of secure enclaves, which is a secured 
 memory zone isolated from untrusted memories. By sealing enclave objects with secret SGX keys to untrusted memory (i.e., 
 persistent storage on host) and unsealing encrypted objects to enclave, SGX ensures that in-enclave data is unavailable 
-from the outside, even with a malicious OS or hypervisor~\cite{}.
+from the outside, even with a malicious OS or hypervisor~\cite{sgxsidechannel}.
 
 Unfortunately, the freshness cannot be guaranteed by simply running KVS on SGX-enabled hosts. 
 The problem lies in the lack of version check when an enclave loads objects from untrusted memory.

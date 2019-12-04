@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.11.11)  4 DEC 2019 11:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.11.11)  4 DEC 2019 14:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -217,50 +217,40 @@ Package grfext Info: Graphics extension search list:
  (/usr/local/texlive/2019/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-LaTeX Font Info:    Try loading font information for U+msa on input line 71.
+LaTeX Font Info:    Try loading font information for U+msa on input line 70.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 71.
+LaTeX Font Info:    Try loading font information for U+msb on input line 70.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+lasy on input line 71.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 70.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
-)
-Overfull \hbox (1.22757pt too wide) in paragraph at lines 73--79
-\OT1/cmr/m/it/9 Prepar-ing ACM SIG Pro-ceed-ings Us-ing L[]T[]X$\OT1/cmr/m/n/9 2[]$ \OT1/cmr/m/it/9 and BibT[]X\OT1/cmr/m/n/9 .
- []
-
-(./intro.tex) (./background.tex [1{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
-
-
-]
-
-LaTeX Warning: Reference `solutions' on page 2 undefined on input line 22.
-
-
-Overfull \hbox (12.0559pt too wide) in paragraph at lines 26--27
-\OT1/cmr/m/n/9 Intel has re-cently added sup-port for mono-tonic coun-ters (MC) []
+) (./intro.tex
+Overfull \hbox (1.88097pt too wide) in paragraph at lines 2--3
+\OT1/cmr/m/n/9 stored in data cen-ters is grow-ing at an ever in-creas-ing rate [5].
  []
 
 
-LaTeX Warning: Reference `solutions' on page 2 undefined on input line 41.
-
-
-LaTeX Warning: Reference `solutions' on page 2 undefined on input line 41.
-
-) (./problem.tex
-Overfull \hbox (3.39047pt too wide) in paragraph at lines 3--12
-\OT1/cmr/m/n/9 tems, while the pro-tec-tion of these data is not enough. Specif-
+Overfull \hbox (8.4925pt too wide) in paragraph at lines 6--7
+\OT1/cmr/m/n/9 cause mod-ern stor-age sys-tems are quite com-plex [12]. Thereby,
  []
 
 
-Underfull \vbox (badness 2368) has occurred while \output is active []
+Overfull \hbox (4.39413pt too wide) in paragraph at lines 8--9
+\OT1/cmr/m/n/9 ex-e-cu-tion en-vi-ron-ments (TEEs), such as In-tel Soft-ware Guard
+ []
 
- [2]
-<rollback.pdf, id=23, 311.1625pt x 217.81375pt>
+) (./background.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [1{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+
+
+] [2]) (./problem.tex
+<rollback.pdf, id=19, 311.1625pt x 217.81375pt>
 File: rollback.pdf Graphic file (type pdf)
 <use rollback.pdf>
 Package pdftex.def Info: rollback.pdf  used on input line 29.
@@ -273,16 +263,16 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 2.
  (./sgx.tex [3 <./rollback.pdf>]) (./rote.tex
-Overfull \hbox (3.57819pt too wide) in paragraph at lines 3--6
-\OT1/cmr/m/n/9 pro-vide sta-ble per-sis-tent roll-back at-tack pro-tec-tions, ROTE []
+Overfull \hbox (12.82813pt too wide) in paragraph at lines 3--6
+\OT1/cmr/m/n/9 pro-vide sta-ble per-sis-tent roll-back at-tack pro-tec-tions, ROTE [13]
  []
 
-
+[4]
 Overfull \hbox (1.87587pt too wide) in paragraph at lines 38--44
 \OT1/cmr/m/n/9 and com-pare counter val-ues in re-mote as-sist-ing servers. With
  []
 
-<rote_sys.jpg, id=35, 716.6775pt x 226.8475pt>
+<rote_sys.jpg, id=34, 716.6775pt x 226.8475pt>
 File: rote_sys.jpg Graphic file (type jpg)
 <use rote_sys.jpg>
 Package pdftex.def Info: rote_sys.jpg  used on input line 50.
@@ -292,12 +282,12 @@ Overfull \hbox (9.89832pt too wide) in paragraph at lines 55--56
 \OT1/cmr/m/n/9 pli-ca-tion run-ning on plat-forms matches an Application-Specific
  []
 
-[4 <./rote_sys.jpg>]
+
 Overfull \hbox (5.77916pt too wide) in paragraph at lines 69--70
 \OT1/cmr/m/n/9 run-time mem-ory and seal its state with the counter. 
  []
 
-
+[5 <./rote_sys.jpg>]
 Overfull \hbox (7.89276pt too wide) in paragraph at lines 110--114
 \OT1/cmr/m/n/9 As is men-tioned above, ROTE lever-ages \OT1/cmr/m/it/9 inc-then-store \OT1/cmr/m/n/9 counter
  []
@@ -312,26 +302,25 @@ Overfull \hbox (8.75313pt too wide) in paragraph at lines 115--123
 \OT1/cmr/m/n/9 trust model by en-abling crash re-cov-ery be-tween seal-ing counter
  []
 
-) (./speicher.tex [5])) (./evaluation.tex) (./discussion.tex) (/Users/monicazhang/Desktop/COMP9102/.texpadtmp/paper.bbl) [6
+) (./speicher.tex [6])) (./evaluation.tex) (./discussion.tex
+Overfull \hbox (14.44006pt too wide) in paragraph at lines 22--1
+\OT1/cmr/m/n/9 asyn-chronous counter in-cre-ment), and the \OT1/cmr/m/it/9 Read\OT1/cmr/m/n/9 /\OT1/cmr/m/it/9 Write \OT1/cmr/m/n/9 through-
+ []
 
-] (/Users/monicazhang/Desktop/COMP9102/.texpadtmp/paper.aux)
-
-LaTeX Warning: There were undefined references.
-
- ) 
+) [7] (/Users/monicazhang/Desktop/COMP9102/.texpadtmp/paper.bbl) [8] (/Users/monicazhang/Desktop/COMP9102/.texpadtmp/paper.aux) ) 
 Here is how much of TeX's memory you used:
- 2531 strings out of 492616
- 33553 string characters out of 6129480
- 108232 words of memory out of 5000000
- 6363 multiletter control sequences out of 15000+600000
- 27240 words of font info for 60 fonts, out of 8000000 for 9000
+ 2554 strings out of 492616
+ 34006 string characters out of 6129480
+ 107323 words of memory out of 5000000
+ 6388 multiletter control sequences out of 15000+600000
+ 25731 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,8n,29p,1247b,253s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on /Users/monicazhang/Desktop/COMP9102/.texpadtmp/paper.pdf (6 pages, 227792 bytes).
+ 41i,8n,29p,1313b,251s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on /Users/monicazhang/Desktop/COMP9102/.texpadtmp/paper.pdf (8 pages, 230644 bytes).
 PDF statistics:
- 94 PDF objects out of 1000 (max. 8388607)
- 66 compressed objects within 1 object stream
+ 90 PDF objects out of 1000 (max. 8388607)
+ 63 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
