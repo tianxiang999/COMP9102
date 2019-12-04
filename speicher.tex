@@ -35,3 +35,13 @@ the counter value is beyond the older version of the counter stored in disk.
 
 
 \subsubsection{Limitations and Future Directions}
+
+We claim that the design of Speicher does improve rollback protection and is robust to 
+restore at any time of protocol execution. As an SGX based KVS, Speicher also considers 
+the limited size of enclaves (around 128MB), and designed a new data structure outside 
+the enclave to preserve the integrity. Unfortunately, Speicher may have failed to breakdown 
+the overhead by each SGX components. For example, the asynchronous trusted counter mechanism
+batches arrived counter increment operations and we expect to see the breakdown to see how 
+this mechanism helps improve the throughput.
+
+
