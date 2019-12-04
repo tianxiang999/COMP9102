@@ -5,7 +5,7 @@ to users. The use of Intel SGX helps nullify part of this problem, including the
 confidentiality of data and integrity of execution code. However, directly apply SGX
 cannot solve this problem because SGX also fails to check the latest version of records. 
 Some prior works develop different counter increment based techniques to protect against
-rollback attacks, including ROTE~\cite{}, Speicher~\cite{}, EnclaveDB~\cite{} and so on.
+rollback attacks, including ROTE~\cite{matetic2017rote}, Speicher~\cite{bailleu2019speicher}, EnclaveDB~\cite{enclavedb:sp18} and so on.
 These systems either incurring moderate overhead or being effective in a distributed setting,
 with some drawbacks in either evaluation or crash tolerance. 
 Thus, we propose some improvements on the design and evaluation of existing work and plan 
