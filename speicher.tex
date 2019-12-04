@@ -8,6 +8,10 @@ counter value thereafter. The second difference lies in the architecture. The RO
 uses several assisting severs organized by a trusted group manager while the Speicher system 
 uses only localized protection.
 
+
+\subsubsection{Overview of Speicher}
+
+
 The update stage of Speicher works as follows. To update a record or add a new 
 record in KVS, Speicher first inserts the record into a runtime data structure
 named as \textit{memtable}. Then the counter is incremented to the value in 
@@ -23,3 +27,11 @@ the counter value is beyond the older version of the counter stored in disk.
 
 
 
+\subsubsection{System Description}
+
+
+
+
+
+
+\subsubsection{Limitations and Future Directions}
