@@ -4,45 +4,45 @@ The top-level auxiliary file: /Users/monicazhang/Desktop/COMP9102/.texpadtmp/pap
 The style file: abbrv.bst
 Database file #1: ../sigproc-sp-csis8101.bib
 Warning--can't use both volume and number fields in hunt2010zookeeper
-You've used 17 entries,
+You've used 23 entries,
             2118 wiz_defined-function locations,
-            586 strings with 7069 characters,
-and the built_in function-call counts, 6675 in all, are:
-= -- 642
-> -- 348
-< -- 10
-+ -- 138
-- -- 120
-* -- 429
-:= -- 1064
-add.period$ -- 57
-call.type$ -- 17
-change.case$ -- 111
+            618 strings with 8410 characters,
+and the built_in function-call counts, 9247 in all, are:
+= -- 886
+> -- 495
+< -- 16
++ -- 197
+- -- 172
+* -- 611
+:= -- 1474
+add.period$ -- 78
+call.type$ -- 23
+change.case$ -- 154
 chr.to.int$ -- 0
-cite$ -- 18
-duplicate$ -- 281
-empty$ -- 520
-format.name$ -- 120
-if$ -- 1452
+cite$ -- 24
+duplicate$ -- 386
+empty$ -- 712
+format.name$ -- 172
+if$ -- 2009
 int.to.chr$ -- 0
-int.to.str$ -- 17
-missing$ -- 16
-newline$ -- 87
-num.names$ -- 34
-pop$ -- 154
+int.to.str$ -- 23
+missing$ -- 22
+newline$ -- 117
+num.names$ -- 46
+pop$ -- 210
 preamble$ -- 1
-purify$ -- 94
+purify$ -- 131
 quote$ -- 0
-skip$ -- 201
+skip$ -- 273
 stack$ -- 0
-substring$ -- 305
-swap$ -- 96
-text.length$ -- 10
+substring$ -- 410
+swap$ -- 133
+text.length$ -- 16
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 68
+type$ -- 92
 warning$ -- 1
-while$ -- 57
-width$ -- 19
-write$ -- 188
+while$ -- 80
+width$ -- 25
+write$ -- 258
 (There was 1 warning)

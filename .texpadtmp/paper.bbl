@@ -6,6 +6,13 @@ F.~Alder, A.~Kurnikov, A.~Paverd, and N.~Asokan.
 \newblock In {\em 2018 48th Annual IEEE/IFIP International Conference on
   Dependable Systems and Networks (DSN)}, pages 195--206. IEEE, 2018.
 
+\bibitem{anati2013innovative}
+I.~Anati, S.~Gueron, S.~Johnson, and V.~Scarlata.
+\newblock Innovative technology for cpu based attestation and sealing.
+\newblock In {\em Proceedings of the 2nd international workshop on hardware and
+  architectural support for security and privacy}, volume~13. ACM New York, NY,
+  USA, 2013.
+
 \bibitem{partition:sgx:securecomm15}
 A.~Atamli-Reineh and A.~Martin.
 \newblock Securing application with software partitioning: A case study using
@@ -19,6 +26,11 @@ M.~Bailleu, J.~Thalheim, P.~Bhatotia, C.~Fetzer, M.~Honda, and K.~Vaswani.
   execution.
 \newblock In {\em 17th $\{$USENIX$\}$ Conference on File and Storage
   Technologies ($\{$FAST$\}$ 19)}, pages 173--190, 2019.
+
+\bibitem{bhatotia2012shredder}
+P.~Bhatotia, R.~Rodrigues, and A.~Verma.
+\newblock Shredder: Gpu-accelerated incremental storage and computation.
+\newblock In {\em FAST}, volume~14, page~14, 2012.
 
 \bibitem{sgxsidechannel}
 F.~Brasser, U.~M{\"u}ller, A.~Dmitrienko, K.~Kostiainen, S.~Capkun, and A.-R.
@@ -39,6 +51,14 @@ V.~Costan and S.~Devadas.
 \newblock Intel sgx explained.
 \newblock {\em IACR Cryptology ePrint Archive}, 2016(086):1--118, 2016.
 
+\bibitem{gunawi2014bugs}
+H.~S. Gunawi, M.~Hao, T.~Leesatapornwongsa, T.~Patana-anake, T.~Do,
+  J.~Adityatama, K.~J. Eliazar, A.~Laksono, J.~F. Lukman, V.~Martin, et~al.
+\newblock What bugs live in the cloud? a study of 3000+ issues in cloud
+  systems.
+\newblock In {\em Proceedings of the ACM Symposium on Cloud Computing}, pages
+  1--14. ACM, 2014.
+
 \bibitem{hunt2010zookeeper}
 P.~Hunt, M.~Konar, F.~P. Junqueira, and B.~Reed.
 \newblock Zookeeper: Wait-free coordination for internet-scale systems.
@@ -50,6 +70,12 @@ V.~Karande, E.~Bauman, Z.~Lin, and L.~Khan.
 \newblock Sgx-log: Securing system logs with sgx.
 \newblock In {\em Proceedings of the 2017 ACM on Asia Conference on Computer
   and Communications Security}, pages 19--30. ACM, 2017.
+
+\bibitem{lu2013study}
+L.~Lu, A.~C. Arpaci-Dusseau, R.~H. Arpaci-Dusseau, and S.~Lu.
+\newblock A study of linux file system evolution.
+\newblock In {\em Presented as part of the 11th $\{$USENIX$\}$ Conference on
+  File and Storage Technologies ($\{$FAST$\}$ 13)}, pages 31--44, 2013.
 
 \bibitem{matetic2017rote}
 S.~Matetic, M.~Ahmed, K.~Kostiainen, A.~Dhar, D.~Sommer, A.~Gervais, A.~Juels,
@@ -72,6 +98,11 @@ C.~Priebe, K.~Vaswani, and M.~Costa.
 C.~Rozas.
 \newblock Intel{\textregistered} software guard extensions
   (intel{\textregistered} sgx), 2013.
+
+\bibitem{santos2009towards}
+N.~Santos, K.~P. Gummadi, and R.~Rodrigues.
+\newblock Towards trusted cloud computing.
+\newblock {\em HotCloud}, 9(9):3, 2009.
 
 \bibitem{seeger2009key}
 M.~Seeger and S.~Ultra-Large-Sites.
@@ -99,5 +130,12 @@ R.~Strackx and F.~Piessens.
 \newblock Developing secure sgx enclaves: New challenges on the horizon.
 \newblock In {\em Proceedings of the 1st Workshop on System Software for
   Trusted Execution}, page~3. ACM, 2016.
+
+\bibitem{winter2008trusted}
+J.~Winter.
+\newblock Trusted computing building blocks for embedded linux-based arm
+  trustzone platforms.
+\newblock In {\em Proceedings of the 3rd ACM workshop on Scalable trusted
+  computing}, pages 21--30. ACM, 2008.
 
 \end{thebibliography}
