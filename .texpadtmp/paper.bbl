@@ -1,3 +1,103 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{10}
+
+\bibitem{alder2018migrating}
+F.~Alder, A.~Kurnikov, A.~Paverd, and N.~Asokan.
+\newblock Migrating sgx enclaves with persistent state.
+\newblock In {\em 2018 48th Annual IEEE/IFIP International Conference on
+  Dependable Systems and Networks (DSN)}, pages 195--206. IEEE, 2018.
+
+\bibitem{partition:sgx:securecomm15}
+A.~Atamli-Reineh and A.~Martin.
+\newblock Securing application with software partitioning: A case study using
+  sgx.
+\newblock In {\em International Conference on Security and Privacy in
+  Communication Systems}, pages 605--621. Springer, 2015.
+
+\bibitem{bailleu2019speicher}
+M.~Bailleu, J.~Thalheim, P.~Bhatotia, C.~Fetzer, M.~Honda, and K.~Vaswani.
+\newblock $\{$SPEICHER$\}$: Securing lsm-based key-value stores using shielded
+  execution.
+\newblock In {\em 17th $\{$USENIX$\}$ Conference on File and Storage
+  Technologies ($\{$FAST$\}$ 19)}, pages 173--190, 2019.
+
+\bibitem{sgxsidechannel}
+F.~Brasser, U.~M{\"u}ller, A.~Dmitrienko, K.~Kostiainen, S.~Capkun, and A.-R.
+  Sadeghi.
+\newblock Software grand exposure:$\{$SGX$\}$ cache attacks are practical.
+\newblock In {\em 11th $\{$USENIX$\}$ Workshop on Offensive Technologies
+  ($\{$WOOT$\}$ 17)}, 2017.
+
+\bibitem{brenner2016securekeeper}
+S.~Brenner, C.~Wulf, D.~Goltzsche, N.~Weichbrodt, M.~Lorenz, C.~Fetzer,
+  P.~Pietzuch, and R.~Kapitza.
+\newblock Securekeeper: confidential zookeeper using intel sgx.
+\newblock In {\em Proceedings of the 17th International Middleware Conference},
+  page~14. ACM, 2016.
+
+\bibitem{sgxexplained}
+V.~Costan and S.~Devadas.
+\newblock Intel sgx explained.
+\newblock {\em IACR Cryptology ePrint Archive}, 2016(086):1--118, 2016.
+
+\bibitem{hunt2010zookeeper}
+P.~Hunt, M.~Konar, F.~P. Junqueira, and B.~Reed.
+\newblock Zookeeper: Wait-free coordination for internet-scale systems.
+\newblock In {\em USENIX annual technical conference}, volume~8. Boston, MA,
+  USA, 2010.
+
+\bibitem{karande2017sgx}
+V.~Karande, E.~Bauman, Z.~Lin, and L.~Khan.
+\newblock Sgx-log: Securing system logs with sgx.
+\newblock In {\em Proceedings of the 2017 ACM on Asia Conference on Computer
+  and Communications Security}, pages 19--30. ACM, 2017.
+
+\bibitem{matetic2017rote}
+S.~Matetic, M.~Ahmed, K.~Kostiainen, A.~Dhar, D.~Sommer, A.~Gervais, A.~Juels,
+  and S.~Capkun.
+\newblock $\{$ROTE$\}$: Rollback protection for trusted execution.
+\newblock In {\em 26th $\{$USENIX$\}$ Security Symposium ($\{$USENIX$\}$
+  Security 17)}, pages 1289--1306, 2017.
+
+\bibitem{paksula2010persisting}
+M.~Paksula.
+\newblock Persisting objects in redis key-value database.
+\newblock {\em University of Helsinki, Department of Computer Science}, 2010.
+
+\bibitem{enclavedb:sp18}
+C.~Priebe, K.~Vaswani, and M.~Costa.
+\newblock Enclavedb: A secure database using sgx.
+\newblock In {\em EnclaveDB: A Secure Database using SGX}, page~0. IEEE, 2018.
+
+\bibitem{rozas2013intel}
+C.~Rozas.
+\newblock Intel{\textregistered} software guard extensions
+  (intel{\textregistered} sgx), 2013.
+
+\bibitem{seeger2009key}
+M.~Seeger and S.~Ultra-Large-Sites.
+\newblock Key-value stores: a practical overview.
+\newblock {\em Computer Science and Media, Stuttgart}, 2009.
+
+\bibitem{shinde2017panoply}
+S.~Shinde, D.~Le~Tien, S.~Tople, and P.~Saxena.
+\newblock Panoply: Low-tcb linux applications with sgx enclaves.
+\newblock In {\em NDSS}, 2017.
+
+\bibitem{skorobogatov2016bumpy}
+S.~Skorobogatov.
+\newblock The bumpy road towards iphone 5c nand mirroring.
+\newblock {\em arXiv preprint arXiv:1609.04327}, 2016.
+
+\bibitem{strackx2016ariadne}
+R.~Strackx and F.~Piessens.
+\newblock Ariadne: A minimal approach to state continuity.
+\newblock In {\em 25th $\{$USENIX$\}$ Security Symposium ($\{$USENIX$\}$
+  Security 16)}, pages 875--892, 2016.
+
+\bibitem{securesgx:systex16}
+R.~Strackx and F.~Piessens.
+\newblock Developing secure sgx enclaves: New challenges on the horizon.
+\newblock In {\em Proceedings of the 1st Workshop on System Software for
+  Trusted Execution}, page~3. ACM, 2016.
 
 \end{thebibliography}

@@ -2,47 +2,47 @@ This is BibTeX, Version 0.99d (TeX Live 2019)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: /Users/monicazhang/Desktop/COMP9102/.texpadtmp/paper.aux
 The style file: abbrv.bst
-I found no \citation commands---while reading file /Users/monicazhang/Desktop/COMP9102/.texpadtmp/paper.aux
 Database file #1: ../sigproc-sp-csis8101.bib
-You've used 0 entries,
+Warning--can't use both volume and number fields in hunt2010zookeeper
+You've used 17 entries,
             2118 wiz_defined-function locations,
-            497 strings with 3815 characters,
-and the built_in function-call counts, 18 in all, are:
-= -- 0
-> -- 0
-< -- 0
-+ -- 0
-- -- 0
-* -- 2
-:= -- 7
-add.period$ -- 0
-call.type$ -- 0
-change.case$ -- 0
+            586 strings with 7069 characters,
+and the built_in function-call counts, 6675 in all, are:
+= -- 642
+> -- 348
+< -- 10
++ -- 138
+- -- 120
+* -- 429
+:= -- 1064
+add.period$ -- 57
+call.type$ -- 17
+change.case$ -- 111
 chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 1
-format.name$ -- 0
-if$ -- 1
+cite$ -- 18
+duplicate$ -- 281
+empty$ -- 520
+format.name$ -- 120
+if$ -- 1452
 int.to.chr$ -- 0
-int.to.str$ -- 0
-missing$ -- 0
-newline$ -- 3
-num.names$ -- 0
-pop$ -- 0
+int.to.str$ -- 17
+missing$ -- 16
+newline$ -- 87
+num.names$ -- 34
+pop$ -- 154
 preamble$ -- 1
-purify$ -- 0
+purify$ -- 94
 quote$ -- 0
-skip$ -- 1
+skip$ -- 201
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
-text.length$ -- 0
+substring$ -- 305
+swap$ -- 96
+text.length$ -- 10
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 0
-warning$ -- 0
-while$ -- 0
-width$ -- 0
-write$ -- 2
-(There was 1 error message)
+type$ -- 68
+warning$ -- 1
+while$ -- 57
+width$ -- 19
+write$ -- 188
+(There was 1 warning)

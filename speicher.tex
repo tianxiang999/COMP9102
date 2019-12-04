@@ -1,22 +1,23 @@
-\subsection{Speicher}
+\subsection{SPEICHER}
 
-The Speicher system~\cite{} is another KVS that provides rollback protection.
+The SPEICHER system~\cite{} is another KVS that provides rollback protection.
 It mainly has two differences compared to ROTE introduced above. First, 
-Speicher is a typical \textit{store-then-inc} based system that first stores 
+SPEICHER is a typical \textit{store-then-inc} based system that first stores 
 object with pre-incremented counter values into persistent disk memory and increments
 counter value thereafter. The second difference lies in the architecture. The ROTE system
-uses several assisting severs organized by a trusted group manager while the Speicher system 
+uses several assisting severs organized by a trusted group manager while the SPEICHER system 
 uses only localized protection.
 
 
 \subsubsection{Overview of Speicher}
 
+SPEICHER exports a Key-Value (KV) interface backed by Log-Structured Merge Tree (LSM) for supporting secure data storage and query operations. SPEICHER enforces these security properties on an untrusted host by leveraging shielded execution based on a hardware-assisted trusted execution environment (TEE)—specifically, Intel SGX. However, the design of SPEICHER extends the trust in shielded execution beyond the secure SGX enclave memory region to ensure that the security properties are also preserved in the stateful (or non-volatile) setting of an untrusted storage medium, including system crash, reboot, or migration. SPEICHER ensures data freshness by applying asynchronous trusted counters. 
 
-The update stage of Speicher works as follows. To update a record or add a new 
-record in KVS, Speicher first inserts the record into a runtime data structure
+The update stage of SPEICHER works as follows. To update a record or add a new 
+record in KVS, SPEICHER first inserts the record into a runtime data structure
 named as \textit{memtable}. Then the counter is incremented to the value in 
-the stored record. Speicher is a fully asynchronous system that decouples the 
-increment operation and the store operation, which means that Speicher batches
+the stored record. SPEICHER is a fully asynchronous system that decouples the 
+increment operation and the store operation, which means that SPEICHER batches
 the increment operation after a \textit{expected time}. During the expected 
 time, the user can wait for the increment of counter to be stable, and can 
 abort the update operation if time expires. This mechanism prevents users 
@@ -25,21 +26,33 @@ operation and increment operation, the stored record will become invalid as
 the counter value is beyond the older version of the counter stored in disk.
 
 
-
-
 \subsubsection{System Description}
+In this section, we primally introduce the rollback protection measurements of SPEICHER. Firstly, SPEICHER defines an Asynchronous Trusted Monotonic Counter, which fundamentally takes advantage of the lag in the sync operations in modern KV stores. Furthermore, SPEICHER leverages log file with a footer containing cryptographic hash to maintain and verify the data freshness. 
+\begin{itemize}
+	\item \textbf{Asynchronous Trusted Monotonic Counter}
+	
+	 In order to protect the system from rollback attacks, a trusted counter whose value is stored alongside with the sensitive data is needed. To overcome the limitations of SGX counters, an Asynchronous Monotonic Counter (AMC) is proposed based on the observation that many contemporary KV stores do not persist their inserted data immediately. This allows AMC to defer the counter increment until the data is persisted without loosing any availability guarantees. As a result, AMC achieves 70K updates per second in the current implementation.
 
+AMC provides an asynchronous increment interface, because it takes a while since the counter value is incremented until it becomes stable, which means the counter value cannot be rolled back without being detected. At an increment, AMC returns three pieces of information: the current stable value, the incremented counter value, and the expected time for the value to be stable. Due to the expected time and the controller having to be re-authenticated after a shutdown, the client only has to keep the values until the stable time has elapsed, to prevent any data loss in case of a sudden shutdown.
 
+	
+	\item \textbf{Log files}
+	
+	SPEICHER adapted two different log files to ensure the desired security properties, \textit{i.e.,} (a) WAL for persisting inserted KV pairs until a top-level compaction; and (b) the Manifest to keep track of live files. 
+	
+	Regarding WAL, every put operation appends a record to the current WAL. This record consists of the encrypted KV pair, and an encrypted trusted counter value for the WAL at the moment of insertion, and a cryptographic hash over both. Since the records are only appended to the WAL, SPEICHER can use the trusted counter value and the hash value to verify the KV pair, and to replay the operations in a restore event.
 
+The Manifest is similar to the WAL; it is a write-append log consisting of records storing changes of live files. We use the same scheme for the Manifest file as we do for the WAL. 
+\end{itemize}
 
-
+With these two features, SPEICHER extends the trust in shielded execution beyond the secure enclave memory region to ensure that the security properties are also preserved in the stateful setting of an untrusted storage medium.
 
 \subsubsection{Limitations and Future Directions}
 
-We claim that the design of Speicher does improve rollback protection and is robust to 
-restore at any time of protocol execution. As an SGX based KVS, Speicher also considers 
+We claim that the design of SPEICHER does improve rollback protection and is robust to 
+restore at any time of protocol execution. As an SGX based KVS, SPEICHER also considers 
 the limited size of enclaves (around 128MB), and designed a new data structure outside 
-the enclave to preserve the integrity. Unfortunately, Speicher may have failed to breakdown 
+the enclave to preserve the integrity. Unfortunately, SPEICHER may have failed to breakdown 
 the overhead by each SGX components. For example, the asynchronous trusted counter mechanism
 batches arrived counter increment operations and we expect to see the breakdown to see how 
 this mechanism helps improve the throughput.
