@@ -42,7 +42,7 @@ AMC provides an asynchronous increment interface, because it takes a while since
 	
 	Regarding WAL, every put operation appends a record to the current WAL. This record consists of the encrypted KV pair, and an encrypted trusted counter value for the WAL at the moment of insertion, and a cryptographic hash over both. Since the records are only appended to the WAL, SPEICHER can use the trusted counter value and the hash value to verify the KV pair, and to replay the operations in a restore event.
 
-The Manifest is similar to the WAL; it is a write-append log consisting of records storing changes of live files. We use the same scheme for the Manifest file as we do for the WAL. 
+The Manifest is similar to the WAL; it is a write-append log consisting of records storing changes of live files. SPEICHER utilizes the same scheme for the Manifest file as it does for the WAL. 
 \end{itemize}
 
 With these two features, SPEICHER extends the trust in shielded execution beyond the secure enclave memory region to ensure that the security properties are also preserved in the stateful setting of an untrusted storage medium.
